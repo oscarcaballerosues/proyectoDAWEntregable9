@@ -1,0 +1,31 @@
+#review-section{
+    display: flex;
+    justify-content: center;
+}
+
+
+#review-container{
+    width: min-content;
+    display: list-item;
+    justify-content: center;
+    justify-items: center;
+}
+
+.review-item{
+    width: 700px;
+}
+.clientImage{
+    width: 100px;
+}
+
+.clientImage img{
+    border-radius: 50px;
+}
+
+.checked{
+    color: orange;
+}
+
+.review{
+    width: 500px;
+}

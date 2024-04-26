@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../views/css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Contacto</title>
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var email = document.getElementById("email").value;
+            var asunto = document.getElementById("asunto").value;
+            var descripcion = document.getElementById("descripcion").value;
+
+            if (nombre === "" || apellido === "" || email === "" || asunto === "" || descripcion === "") {
+                alert("Todos los campos son obligatorios. Por favor, complete todos los campos.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+	<script src="../views/js/contacto.js"></script>
+    <header>
+        <div class="navegacion">
+            <h2 class="logo">Logotipo</h2>
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="#">Peliculas</a>
+                <a href="#">Mi lista</a>
+                <a href="../pages/contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>  
+
+    <div class="centrar">
+        <div class="container" id="container">
+            <div class="form-container sign-in">
+                <form onsubmit="return validarFormulario()">
+                    <h1>Formulario de Contacto</h1>
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input type="text" id="apellido" placeholder="Apellido" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="asunto" placeholder="Asunto" required>
+                    <input type="text" id="descripcion" placeholder="Descripción" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-right">
+                        <h1>Sobre Nosotros</h1>
+                        <p>Nuestra misión es ofrecer a nuestros usuarios 
+                            la mejor experiencia de entretenimiento en línea, brindando acceso a una amplia gama de contenido original y 
+                            de alta calidad.<br>
+                            Nos esforzamos por ser la plataforma de elección para el entretenimiento en línea, creando un 
+                            espacio donde los usuarios puedan descubrir, disfrutar y compartir historias que los inspiren.
+                        </p>
+                        <h3>Nuestras redes sociales</h3>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
